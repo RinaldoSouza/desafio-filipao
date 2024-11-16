@@ -35,9 +35,11 @@ const rankingDeHerois = [
   },
 ];
 
-if (poder >= 1000) {
-    categoria = "Ferro";
-  } else if (poder >= 2000) {
-    categoria = "Bronze";
-  } else if (idade >= 5000) {
-    categoria = "Prata";  }
+function exibirRanking() {
+  console.log("Ranking de Heróis:");
+  rankingDeHerois.forEach((heroi, indice) => {
+    console.log(`${indice + 1}. ${heroi.nome} - ${heroi.pontos} pontos`);
+  });
+}
+
+exibirRanking();
